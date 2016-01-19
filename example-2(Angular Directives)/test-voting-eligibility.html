@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="votingApp">
+
+	<head>
+		<title>Angular Directives</title>
+		<link type="text/css" rel="stylesheet" href='custom.css'></link>
+
+		<script type="text/javascript" src='../lib/angular.min.js'></script>
+		<script type="text/javascript" src='app.js'></script>
+	</head>
+
+	<body ng-controller="VotingCntrl">
+		<div style="margin-left: 45%;margin-top: 30px;">
+			<h4>{{welcomeMsg}}</h4>
+			Name: <input type="text" ng-model="user.name"></input><br/>
+			Are you above 18 years <input type="checkbox" ng-model="user.isAbove18"></input><br/><br/>
+
+			<div ng-show="user.isAbove18" ng-class="{success: 'user.isAbove18'}">Congrats {{user.name}} your are eligible for voting!</div>
+			<div ng-show="user.isAbove18 === false" ng-class="{warning: '!user.isAbove18'}">Hey {{user.name}} please wait untill you attain 18!</div>
+
+			<ul ng-hide="user.isAbove18 === undefined">Please refer the rules:
+				<li ng-repeat="rule in rules">
+					<span>{{rule}}</span>
+				</li>
+			</ul>
+		</div>
+	</body>
+
+</html>
+
+AIzaSyC7srLdMUwMCwunn164XKb_N5r7fl8RwLY
+https://console.developers.google.com

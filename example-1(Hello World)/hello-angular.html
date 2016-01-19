@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="helloApp">
+	<head>
+		<title>Hello World</title>
+		<script type="text/javascript" src='../lib/angular.min.js'></script>
+		<script type="text/javascript" src='app.js'></script>
+	</head>
+	<body ng-controller="HelloController">
+		<div style="margin-left: 45%;margin-top: 30px;">
+			<h4>{{welcomeMsg}}</h4>
+			Enter Text: <input type="text" ng-model="fooMessage"></input><br/>
+			You Typed:<b> <span ng-bind="fooMessage"></span></b><br/><br/>
+
+			2-way binding: <input type="text" ng-model="fooMessage"></input><br/>
+		</div>
+	</body>
+</html>
