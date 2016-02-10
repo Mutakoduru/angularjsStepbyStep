@@ -6,6 +6,8 @@ controllers.controller('searchController',
 		$scope.search = function() {
 			searchService.search($scope.searchTerm).then(function(result) {
 				$scope.result = result.data;
+			}, function(response) {
+				console.log(response);
 			});
 		}
 	}

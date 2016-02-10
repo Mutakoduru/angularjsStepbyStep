@@ -1,20 +1,8 @@
-var userInfoApp = angular.module('userInfoApp', []);
+var helloApp = angular.module('helloApp', []);
 
-userInfoApp.controller('userController',
-	['$scope', 'localStorageService', function($scope, localStorageService) {
-		$scope.user = {};
-
-		$scope.save = function() {
-			localStorageService.set('user', JSON.stringify(user));
-		}
-
-		$scope.clear = function() {
-			localStorageService.remove('user');
-			$scope.user = {};
-		}
-
-		$scope.get = function() {
-			$scope.user = JSON.parse(localStorageService.get('user'));
-		}
+helloApp.controller('HelloController',
+	['$scope', function($scope) {
+		$scope.welcomeMsg = 'Hello World From AngularJS';
+		$scope.user = {name: 'hdfldfdjlf'}
 	}
 ]);
