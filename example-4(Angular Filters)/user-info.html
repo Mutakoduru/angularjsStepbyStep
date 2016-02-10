@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="pbSearchApp">
+
+	<head>
+		<title>Angular Directives</title>
+		<script type="text/javascript" src='../lib/angular.min.js'></script>
+		<script type="text/javascript" src='../lib/ngStorage.js'></script>
+		<script type="text/javascript" src='app.js'></script>
+		<script type="text/javascript" src='genderFilter.js'></script>
+	</head>
+
+	<body ng-controller="userController as self">
+		<h4>{{welcomeMsg}}</h4>
+		<form novalidate name="myForm">
+			<input type="text" name="fname" ng-model="user.fname" 
+				ng-minlength="10" ng-required="requiredValues === true"/>
+			<input type="text" name="fname" ng-model="user.lname" 
+				ng-minlength="8" ng-required="requiredValues === true"/>
+		</form>
+	</body>
+</html>
