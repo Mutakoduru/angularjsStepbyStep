@@ -20,11 +20,12 @@
 					</th></td></thead>
 			<tr ng-repeat="item in result.items" style="margin-top: 10px;">
 				<td>
-					<img ng-if="item.pagemap.cse_thumbnail" ng-src="{{item.pagemap.cse_thumbnail[0].src}}" style="width: 250px; height=180px;"/>
+					<img ng-src="{{item.pagemap.cse_thumbnail[0].src}}" style="width: 250px; height=180px;"/>
 				</td>
 				<td>
-					<a ng-href="{{item.link}}" ng-bind="item.title" style="position: absolute;font-size: 1.2em;"/>
+					<a ng-href="{{item.link}}" ng-bind="item.title" style="position: absolute;font-size: 1.2em;">
 						<span ng-bind="item.snippet"/>
+					</a>
 				</td>
 			</tr>	</table>
 	</body>

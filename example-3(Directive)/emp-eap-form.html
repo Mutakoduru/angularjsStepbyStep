@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="epaApp">
+
+	<head>
+		<title>Angular Directives</title>
+		<link type="text/css" rel="stylesheet" href='custom.css'></link>
+
+		<script type="text/javascript" src='../lib/angular.min.js'></script>
+		<script type="text/javascript" src='../lib/jquery.min.js'></script>
+		<script type="text/javascript" src='app.js'></script>
+		<script type="text/javascript" src='requiredDirective.js'></script>
+	</head>
+
+	<body>
+		<div style="margin-left: 45%;margin-top: 30px;" ng-controller="EPACntrl">
+			<h4>Calculate EAP(Employee Assitence Program) Amount/Year</h4>
+			<ng-form novalidate name="employeeForm">
+				<table>
+				<tr>
+				<td>
+					<label>Name</label>
+					</td>
+					<td>
+					<input type="text" name="name" ng-model="emp.name" required>
+					<span class="warning" ng-show="!employeeForm.$pristine && employeeForm.name.$invalid">Name Required</span>
+					</td>
+				</tr>
+				<tr>
+				<td>
+					<label>CTC</label>
+					</td>
+					<td>
+					<input type="number" name="ctc" min="1" ng-model="emp.ctc" required>
+					<span class="warning" ng-show="!employeeForm.$pristine && employeeForm.ctc.$invalid">Empty/Invalid CTC</span>
+					</td>
+					</tr>
+				<tr><td>
+					<label>Qualification</label>
+					</td>
+					<td>
+					<select ng-model="emp.qualification">
+						<option ng-repeat="item in ['B.E.', 'B.Tech.', 'M.Tech', 'MCA']" ng-value="item">{{item}}</option>
+					</select></td>
+				</tr>
+				<tr><td></td>
+				<td>
+				<button type="submit" ng-click="calculateAmt()">Calculate</button>
+				</td>
+				</tr>
+				</table>
+			</ng-form>
+			<div ng-show="emp.epaAmt">For <span>{{emp.name}}</span>, the maximum EAP amount is <strong>Rs. {{emp.epaAmt | number: 2}} </strong></div>
+		</div>
+	</body>
+</html>
