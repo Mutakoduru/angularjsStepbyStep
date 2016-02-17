@@ -1,3 +1,8 @@
+/**
+This example says hi to user with proper salutation(Mr./Miss.) based upon the user's gender.
+This is done using gender filter defined in genderFilter.js file.
+**/
+
 var app = angular.module('genderBySalutationApp', []);
 
 app.controller('GenderCntrl',

@@ -1,3 +1,5 @@
+/**This example tells whether a user is eligible for voting.**/
+
 var votingApp = angular.module('votingApp', []);
 
 votingApp.controller('VotingCntrl',
