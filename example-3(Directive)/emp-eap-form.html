@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html ng-app="epaApp">
-
 	<head>
 		<title>Angular Directives</title>
 		<link type="text/css" rel="stylesheet" href='custom.css'></link>
@@ -17,12 +16,12 @@
 			<ng-form novalidate name="employeeForm">
 				<table>
 				<tr>
-				<td>
-					<label>Emp. Name</label>
-					</td>
+				    <td>
+					   <label>Emp. Name</label>
+				    </td>
 					<td>
-					<input type="text" name="name" ng-model="emp.name" required>
-					<span class="warning" ng-show="!employeeForm.$pristine && employeeForm.name.$invalid">Name Required</span>
+					   <input type="text" name="name" ng-model="emp.name" required>
+					   <span class="warning" ng-show="!employeeForm.$pristine && employeeForm.name.$invalid">Name Required</span>
 					</td>
 				</tr>
 				<tr>
