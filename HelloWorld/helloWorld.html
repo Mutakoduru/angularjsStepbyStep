@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <script src="../lib/angular.min.js" >
+        </script>
+        <script src="app.js" >
+        </script>
+		<title>Hello World</title>
+	</head>
+	<body ng-app="helloWorldApp">
+		<div ng-controller="helloWorldCntrl">
+            {{welcomeMsg}}
+        </div>
+		<div ng-controller="userInfoCntrl">
+            Hello <span style="font-size: 16px;" ng-bind="user.name"></span> your roll no is: 
+            <span style="font-size: 16px;">{{user.roll}}</span>
+        </div>
+	</body>
+</html>
