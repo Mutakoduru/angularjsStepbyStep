@@ -1,0 +1,22 @@
+<html>
+ <head>
+        <script src="../lib/angular.min.js"  >
+        </script>
+        <script src="app.js" >
+        </script>
+     
+ </head>
+ <body ng-app="studentInfoApp">
+        <center><h2>Student Information</h2></center>
+    <div ng-controller="studentInfo">
+        First Name:  <input type="text" ng-model="user.firstname"/><br/>
+        Last Name:  <input type="text" ng-model="user.lastname"/><br/>
+        Roll No:  <input type="text" ng-model="user.roll"/><br/>
+        Maths: <input type="text" ng-model="user.maths"/><br/>
+        Science: <input type="text" ng-model="user.science"/><br/>
+        English: <input type="text" ng-model="user.english"/><br/><br/>
+        <button ng-click="calculateTotalMarks();" >Print</button><br/>
+       <b><span ng-show="showMsg">Hi {{user.firstname}} {{user.lastname}} your roll no. is {{user.roll}} and total marks scored are: {{totalMarks}}</span></b>
+     </div>
+ </body>
+</html>
