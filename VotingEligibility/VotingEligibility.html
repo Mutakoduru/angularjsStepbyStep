@@ -1,0 +1,19 @@
+<html>
+ <head>
+        <script src="../lib/angular.min.js"  >
+        </script>
+        <script src="app.js" >
+        </script>
+     
+ </head>
+ <body ng-app="votingEligibilityApp">
+        <center><h2>Voting Eligibility Test</h2></center>
+    <div ng-controller="votingEligibilityController">
+        Please choose your age: <select ng-model="userAge"><option ng-repeat="number in numbers" value="{{number}}">{{number}}</option></select>
+        <div>
+            <button ng-click="checkEligibility();" >Check</button><br/>
+           <b><span ng-show="showMsg">Hi you are {{msg}} for voting!</span></b>
+        </div>
+     </div>
+ </body>
+</html>
