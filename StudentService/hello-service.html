@@ -1,0 +1,33 @@
+<html>
+<head>
+    <script src="../lib/angular.min.js"  >
+    </script>
+    <script src="studentService.js" >
+    </script>
+    <script src="app.js" >
+    </script>
+</head>
+<body align="center" ng-app="studentApp">
+    <center><h2>Voting Eligibility Test</h2></center>
+    <div ng-controller="studentController">
+        <span>Name: {{user.name}}</span><br/>
+        <span>Sub1: {{user.sub1}}</span><br/>
+        <span>Sub2: {{user.sub2}}</span><br/>
+        <span>Sub3: {{user.sub3}}</span><br/>
+        <button ng-click="calculateTotal();" >Print</button><br/><br/>
+        <b><span ng-show="showMsg">
+            Total Marks: {{totalMarks}}</span></b>
+     </div>
+    
+    
+    <div ng-controller="studentController">
+        <span>Name: {{user.name}}</span><br/>
+        <span>Sub1: {{user.sub1}}</span><br/>
+        <span>Sub2: {{user.sub2}}</span><br/>
+        <span>Sub3: {{user.sub3}}</span><br/>
+        <button ng-click="calculateTotal();" >Print</button><br/><br/>
+        <b><span ng-show="showMsg">
+            Total Marks: {{totalMarks}}</span></b>
+     </div>
+</body>
+</html>
