@@ -4,6 +4,8 @@
     </script>
     <script src="studentService.js" >
     </script>
+    <script src="yesNoFilter.js" >
+    </script>
     <script src="app.js" >
     </script>
 </head>
@@ -14,17 +16,8 @@
         <span>Sub1: {{user.sub1}}</span><br/>
         <span>Sub2: {{user.sub2}}</span><br/>
         <span>Sub3: {{user.sub3}}</span><br/>
-        <button ng-click="calculateTotal();" >Print</button><br/><br/>
-        <b><span ng-show="showMsg">
-            Total Marks: {{totalMarks}}</span></b>
-     </div>
-    
-    
-    <div ng-controller="studentController">
-        <span>Name: {{user.name}}</span><br/>
-        <span>Sub1: {{user.sub1}}</span><br/>
-        <span>Sub2: {{user.sub2}}</span><br/>
-        <span>Sub3: {{user.sub3}}</span><br/>
+        <span>Is Passed: {{user.pass | yesNo}}</span><br/>
+        <span>Fees Paid: {{user.fees | number}}</span><br/>
         <button ng-click="calculateTotal();" >Print</button><br/><br/>
         <b><span ng-show="showMsg">
             Total Marks: {{totalMarks}}</span></b>
