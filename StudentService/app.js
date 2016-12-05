@@ -1,6 +1,6 @@
 var app = angular.module('studentApp');
 
-app.controller('studentController', ['$scope', 'studentService', function($scope, studentService) {
+app.controller('studentController', ['$scope', 'studentService', '$rootScope', function($scope, studentService, $rootScope) {
     $scope.user = {name: 'Deepak', sub1: 29, sub2: 30, sub3: 24};
 
     $scope.calculateTotal = function() {
