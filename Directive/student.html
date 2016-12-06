@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="studentApp">
+	<head>
+		<title>Angular Directives</title>
+		<script type="text/javascript" src='../lib/angular.min.js'></script>
+        <script type="text/javascript" src='../lib/jquery.min.js'></script>
+		<script type="text/javascript" src='requiredDirective.js'></script>
+        <script type="text/javascript" src='app.js'></script>
+	</head>
+
+	<body>
+		<div style="margin-left: 45%;margin-top: 30px;" ng-controller="StudentCntrl">
+			<h4>Student Details</h4>
+			<form novalidate>
+				<table>
+				<tr>
+				    <td>
+					   <label>Student Name</label>
+				    </td>
+					<td>
+					   <input type="text" name="name" ng-model="student.name" required>
+					</td>
+				</tr>
+				<tr>
+				<td>
+					<label>Roll</label>
+					</td>
+					<td>
+					<input type="number" name="roll" min="1" ng-model="student.roll" >
+					</td>
+					</tr>
+				<tr>
+				<td>
+					<label>Sub1 Marks</label>
+					</td>
+					<td>
+					<input type="number" name="roll" min="1" ng-model="student.sub1">
+					</td>
+					</tr>
+				<tr>
+				<td>
+					<label>Sub2 Marks</label>
+					</td>
+					<td>
+					<input type="number" name="roll" min="1" ng-model="student.sub2">
+					</td>
+					</tr>
+				<tr><td></td>
+				<td>
+				<button type="submit" ng-click="showMsg = true;">Print</button>
+				</td>
+				</tr>
+				</table>
+			</form>
+			<div ng-show="showMsg">For <span>{{student.name}}</span> the roll is: {{student.roll}} </strong></div>
+		</div>
+	</body>
+</html>
