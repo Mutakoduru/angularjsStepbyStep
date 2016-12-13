@@ -10,4 +10,9 @@ app.controller('studentInfo', ['$scope', function($scope) {
         $scope.showMsg = true;
     }
 
+    $scope.addStudent = function() {
+        $scope.students.push($scope.user);
+        $scope.user = {};
+    }
+    $scope.students = [{name: 'Deepak Rana', roll: 1000}, {name: 'Tej', roll: 1001}, {name: 'Hema', roll: 1001}];
 }]);
