@@ -1,0 +1,14 @@
+<div>
+    <div class="row">
+        <div class="col-md-4">
+            <label class="form-label">First Name:</label><input type="text" class="form-control" ng-model="user.name"/><br/>
+            <label class="form-label">Roll No:  </label><input type="text" ng-model="user.roll" class="form-control" /><br/>
+            <label class="form-label">Maths: </label><input type="text" ng-model="user.maths" class="form-control" /><br/>
+            <label class="form-label">Science: </label><input type="text" ng-model="user.science" class="form-control" /><br/>
+            <label class="form-label">English: </label><input type="text" ng-model="user.english" class="form-control" /><br/><br/>
+            <button class="btn btn-primary spacer-bottom" ng-click="addStudent();">Add</button><br/>
+           <b><span ng-show="showMsg">Hi {{user.firstname}} {{user.lastname}} your roll no. is {{user.roll}} and total marks scored are: {{totalMarks}}</span>
+            </b>
+            </div>
+        </div>
+ </div>

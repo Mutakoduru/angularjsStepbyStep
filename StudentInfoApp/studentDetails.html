@@ -1,15 +1,22 @@
 <table class="table table-bordered">
-    <tr>
-        <th>Name
-        </th>
-        <th>Roll</th>
-        <th>Maths</th>
-    </tr>
+    <thead>
+        <tr>
+            <td colspan="4"><center><h3>{{tableHeading}}</h3></center></td>
+        </tr>
+        <tr>
+            <th>Name
+            </th>
+            <th>Roll</th>
+            <th>Maths</th>
+            <th>Remove</th>
+        </tr>
+    </thead>
     <tbody>
         <tr ng-repeat="st in students">
             <td>{{st.name}}</td>
             <td>{{st.roll}}</td>
             <td>{{st.maths}}</td>
+            <td><button class="btn btn-primary" ng-click="removeSt(st.roll)">Remove</button></td>
         </tr>
     </tbody>
 </table>

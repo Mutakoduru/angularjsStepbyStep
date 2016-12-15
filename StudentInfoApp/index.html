@@ -2,7 +2,11 @@
  <head>
         <link href="bootstrap.min.css" rel="stylesheet">
         <link href="custom.css" rel="stylesheet">
-        <script src="angular.min.js"  >
+        <script src="jquery.min.js">
+        </script>
+        <script src="angular.min.js">
+        </script>
+        <script src="angular-route.min.js">
         </script>
         <script src="app.js" >
         </script>
@@ -11,23 +15,11 @@
  </head>
  <body ng-app="studentInfoApp">
     <center><h2>Student Information</h2></center>
-     <div  class="container">
-    <div ng-controller="studentInfo">
-        <div class="row">
-            <div class="col-md-4">
-                <label class="form-label">First Name:</label><input type="text" class="form-control" ng-model="user.name"/><br/>
-                <label class="form-label">Roll No:  </label><input type="text" ng-model="user.roll" class="form-control" /><br/>
-                <label class="form-label">Maths: </label><input type="text" ng-model="user.maths" class="form-control" /><br/>
-                <label class="form-label">Science: </label><input type="text" ng-model="user.science" class="form-control" /><br/>
-                <label class="form-label">English: </label><input type="text" ng-model="user.english" class="form-control" /><br/><br/>
-                <button class="btn btn-primary spacer-bottom" ng-click="addStudent();">Add</button><br/>
-               <b><span ng-show="showMsg">Hi {{user.firstname}} {{user.lastname}} your roll no. is {{user.roll}} and total marks scored are: {{totalMarks}}</span>
-                </b>
-                </div>
-            </div>
-             <students></students>
-     </div>
- </div>
-
+    <div class="container">
+        <a href="#/add" class="btn btn-primary">Add</a>
+        <a href="#/list"  class="btn btn-default">List</a>
+        <div ng-view>
+        </div>
+    </div>
  </body>
 </html>

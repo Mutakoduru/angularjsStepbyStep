@@ -1,9 +1,18 @@
-angular.module('studentInfoApp').directive('students', function() {
+angular.module('studentInfoApp').directive('studentsList', function() {
 	return {
 		templateUrl: '/studentDetails.html',
 		replace : true,
+        scope: {
+            students: '=',
+            tableHeading: '@'
+        },
+        link: function(){
+            
+        },
         controller: 'studentsDetailsController'
 	};
 }).controller('studentsDetailsController', ['$scope', function($scope) {
-    $scope.students = [{name: 'Deepak Rana', roll: 1000, maths: 100}, {name: 'Tej', roll: 1001, maths: 89}, {name: 'Hema', roll: 1001, maths: 99}];
-}]);;
+    $scope.removeSt = function(roll) {
+        $scope.removeStudent(roll);
+    }
+}]);
